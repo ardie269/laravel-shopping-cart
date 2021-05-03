@@ -1,0 +1,18 @@
+reference : 
+
+https://salitha94.blogspot.com/2019/11/create-shopping-cart-with-laravel-6-part-1.html
+https://salitha94.blogspot.com/2019/12/create-shopping-cart-with-laravel-6-part-2.html
+
+sudo composer create-project laravel/laravel="7.*" laravel-shopping-cart
+sudo chown -R $USER:www-data laravel-shopping-cart/
+
+composer require "darryldecode/cart"
+
+create database laravel_shopping_cart
+
+
+
+php artisan make:model Product -m
+php artisan make:seed ProductsTableSeeder
+
+php artisan make:controller CartController
